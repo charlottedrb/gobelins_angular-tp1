@@ -1,0 +1,85 @@
+<!-- STRAT NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark" id="navbar"
+    (window:scroll)="windowScroll()">
+    <div class="container">
+        <a class="navbar-brand" href="#">Globing</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleMenu()">
+            <span class="ti-menu"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mx-auto" id="navbar-navlist">
+                <li class="nav-item" [ngClass]="{'active':currentSection === 'home'}">
+                    <a [ngxScrollTo]="'#home'" class="nav-link" href="javascript: void(0);">Home</a>
+                </li>
+                <li class="nav-item" [ngClass]="{'active':currentSection === 'services'}">
+                    <a [ngxScrollTo]="'#services'" class="nav-link" href="javascript: void(0);">Services</a>
+                </li>
+                <li class="nav-item" [ngClass]="{'active':currentSection === 'features'}">
+                    <a [ngxScrollTo]="'#features'" class="nav-link" href="javascript: void(0);">Features</a>
+                </li>
+                <li class="nav-item" [ngClass]="{'active':currentSection === 'testi'}">
+                    <a [ngxScrollTo]="'#testi'" class="nav-link" href="javascript: void(0);">Client</a>
+                </li>
+                <li class="nav-item" [ngClass]="{'active':currentSection === 'team'}">
+                    <a [ngxScrollTo]="'#team'" class="nav-link" href="javascript: void(0);">Team</a>
+                </li>
+                <li class="nav-item" [ngClass]="{'active':currentSection === 'faq'}">
+                    <a [ngxScrollTo]="'#faq'" class="nav-link" href="javascript: void(0);">FAQ</a>
+                </li>
+                <li class="nav-item" [ngClass]="{'active':currentSection === 'pricing'}">
+                    <a [ngxScrollTo]="'#pricing'" class="nav-link" href="javascript: void(0);">Pricing</a>
+                </li>
+                <li class="nav-item" [ngClass]="{'active':currentSection === 'contact'}">
+                    <a [ngxScrollTo]="'#contact'" class="nav-link" href="javascript: void(0);">Contact</a>
+                </li>
+            </ul>
+            <div>
+                <ul class="text-right list-unstyled list-inline mb-0 nav-social">
+                    <li class="list-inline-item text-white nav-number"><i class="ti-mobile"></i> <span>+1 234 567
+                            789</span></li>
+                    <li class="list-inline-item"><a href="" class="facebook"><i class="ti-facebook"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- END NAVBAR -->
+<div appScrollspy [spiedTags]="['SECTION']" (sectionChange)="onSectionChange($event)">
+    <!-- START HOME -->
+    <section class="section bg-home half-home" id="home">
+        <div class="home-center">
+            <div class="home-desc-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="text-center">
+                                <h1 class="home-title text-white text-rotate" id="text">We love make things amazing and
+                                    simple</h1>
+                                <p class="text-muted home-subtitle-center home-subtitle mt-4 mb-0 mx-auto">It is a long
+                                    established fact that a reader will be of a page when established fact looking at
+                                    its
+                                    layout.</p>
+                                <div class="mt-4">
+                                    <a href="#" class="btn btn-outline-white btn-round">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END HOME -->
+
+    <app-services></app-services>
+    <app-features></app-features>
+    <app-client></app-client>
+    <app-team></app-team>
+    <app-faq></app-faq>
+    <app-pricing></app-pricing>
+    <app-contact></app-contact>
+    <app-footer></app-footer>
+    <app-switcher></app-switcher>
+</div>
