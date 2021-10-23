@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component } from '@angular/core';
 
 @Component({
   selector: 'home-page',
@@ -6,28 +6,26 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 
-export class HomePageComponent implements OnInit {
+export class HomePageComponent implements AfterViewInit {
 
   constructor() { }
 
   currentSection = 'home-page';
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     // FIXME updateref + binding
-    /*
     let i = 1;
     setInterval(() => {
-
-
-      // tslint:disable-next-line: max-line-length
-      if (i === 1) { document.getElementById('text').innerHTML = 'We love make things amazing and simple'; }
-      else if (i === 2) { document.getElementById('text').innerHTML = 'Create amazing landing page with Globing'; }
-      else { document.getElementById('text').innerHTML = 'Perfact solution for small businesses'; }
+      if (i === 1) { // @ts-ignore
+        document.getElementById('text').innerHTML = 'We love make things amazing and simple'; }
+      else if (i === 2) { // @ts-ignore
+        document.getElementById('text').innerHTML = 'Create amazing landing page with Globing'; }
+      else { // @ts-ignore
+        document.getElementById('text').innerHTML = 'Perfect solution for small businesses'; }
       if (i >= 3) { i = 0; }
       i++;
-
     }, 2500);
-    */
+
 
   }
   /**
