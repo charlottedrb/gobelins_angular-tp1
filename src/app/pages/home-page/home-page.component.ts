@@ -1,19 +1,16 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-index4',
-  templateUrl: './index4.component.html',
-  styleUrls: ['./index4.component.scss']
+  selector: 'home-page',
+  templateUrl: './home-page.component.html',
+  styleUrls: ['./home-page.component.scss']
 })
 
-/**
- * Index-4 component
- */
-export class Index4Component implements OnInit {
+export class HomePageComponent implements OnInit {
 
   constructor() { }
 
-  currentSection = 'home';
+  currentSection = 'home-page';
 
   ngOnInit(): void {
     // FIXME updateref + binding

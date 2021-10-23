@@ -8,14 +8,14 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { PagesRoutingModule } from './pages-routing.module'
 
-import { SharedModule } from '../shared/shared.module';
-import { Index4Component } from './index4/index4.component';
+import { SharedModule } from '../components/shared.module';
+import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
 import { PasswordForgetComponent } from './password-forget/password-forget.component';
 import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
-  declarations: [ Index4Component, LoginComponent, PasswordForgetComponent, SignupComponent],
+  declarations: [ HomePageComponent, LoginComponent, PasswordForgetComponent, SignupComponent],
   imports: [
     CommonModule,
     SharedModule,

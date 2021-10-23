@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
-  selector: 'app-client',
+  selector: 'client',
   templateUrl: './client.component.html',
   styleUrls: ['./client.component.scss']
 })

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { Index4Component } from './index4/index4.component';
+import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
 import { PasswordForgetComponent } from './password-forget/password-forget.component';
 import { SignupComponent } from './signup/signup.component';
@@ -8,12 +8,12 @@ import { SignupComponent } from './signup/signup.component';
 const routes: Routes = [
     {
         path: '',
-        redirectTo: 'index-4',
+        redirectTo: 'home-page',
         pathMatch: 'full'
     },
      {
-        path: 'index-4',
-        component: Index4Component
+        path: 'home-page',
+        component: HomePageComponent
     },
     {
         path: 'login',

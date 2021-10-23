@@ -1,4 +1,4 @@
-<!-- STRAT NAVBAR -->
+<!-- START NAVBAR -->
 <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark" id="navbar"
     (window:scroll)="windowScroll()">
     <div class="container">
@@ -8,10 +8,11 @@
             <span class="ti-menu"></span>
         </button>
 
+      <!-- FIXME create a loop-->
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mx-auto" id="navbar-navlist">
-                <li class="nav-item" [ngClass]="{'active':currentSection === 'home'}">
-                    <a [ngxScrollTo]="'#home'" class="nav-link" href="javascript: void(0);">Home</a>
+                <li class="nav-item" [ngClass]="{'active':currentSection === 'home-page'}">
+                    <a [ngxScrollTo]="'#home-page'" class="nav-link" href="javascript: void(0);">Home</a>
                 </li>
                 <li class="nav-item" [ngClass]="{'active':currentSection === 'services'}">
                     <a [ngxScrollTo]="'#services'" class="nav-link" href="javascript: void(0);">Services</a>
@@ -73,13 +74,13 @@
     </section>
     <!-- END HOME -->
 
-    <app-services></app-services>
-    <app-features></app-features>
-    <app-client></app-client>
-    <app-team></app-team>
-    <app-faq></app-faq>
-    <app-pricing></app-pricing>
-    <app-contact></app-contact>
-    <app-footer></app-footer>
-    <app-switcher></app-switcher>
+    <services></services>
+    <features></features>
+    <client></client>
+    <team></team>
+    <faq></faq>
+    <pricing></pricing>
+    <contact></contact>
+    <footer></footer>
+    <switcher></switcher>
 </div>
