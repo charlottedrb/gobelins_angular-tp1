@@ -8,7 +8,7 @@
       <span class="ti-menu"></span>
     </button>
 
-    <!-- FIXME create a loop-->
+    <!-- FIXME use *ngFor -->
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mx-auto" id="navbar-navlist">
         <li class="nav-item" [ngClass]="{'active':currentSection === 'home-page'}">
@@ -58,7 +58,7 @@
             <div class="col-lg-10">
               <div class="text-center">
                 <!-- FIXME1  setInterval -->
-                <!-- FIXME2  updateref + binding -->
+                <!-- FIXME2  ChangeDetectorRef detectChanges + binding -->
                 <h1 class="home-title text-white text-rotate" id="text">We love make things amazing and
                   simple</h1>
                 <p class="text-muted home-subtitle-center home-subtitle mt-4 mb-0 mx-auto">It is a long
@@ -423,7 +423,7 @@
       </div>
       <div class="row mt-5">
 
-        <!-- FIXME *ngFor + array of datas in compo + ngClass-->
+        <!-- FIXME use *ngFor + array of datas in component + ngClass-->
         <!-- FIXME (option) ngClass explore true/false resolution-->
         <div class="col-lg-4">
           <div class="bg-white price-box text-center mt-3">

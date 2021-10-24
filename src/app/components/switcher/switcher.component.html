@@ -1,17 +1,17 @@
 <!-- Back to top -->
 <div (window:scroll)="windowScroll()">
-  <!-- note :  [ngxScrollTo] est une directive ( FIXME : Aborder le sujet) -->
+  <!-- note :  [ngxScrollTo] est une directive cf https://angular.io/guide/attribute-directives -->
 <a href="javascript:void(0);" [ngxScrollTo]="'#home-page'" class="back-to-top" id="back-to-top">
   <i class="ti-angle-up"> </i>
 </a>
 </div>
 
 <!-- Style switcher -->
-<!-- FIXME add condition on style depending on if open or not-->
+<!-- FIXME add condition on style depending on if its open or not-->
 <div id="style-switcher">
     <div>
         <h3>Select your color</h3>
-      <!-- FIXME *ngFor with call on click button -->
+      <!-- FIXME *ngFor with function 's call on click button -->
         <ul class="pattern">
             <li>
                 <a class="color1" href="javascript: void(0);" ></a>

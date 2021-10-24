@@ -6,9 +6,7 @@ import { DOCUMENT } from '@angular/common';
 })
 export class ScrollspyDirective {
 
-  //FIXME
   @Input() public spiedTags : string []= [];
-  //@Input() public spiedTags = [];
   @Output() public sectionChange = new EventEmitter<string>();
   private currentSection: string ='';
 
