@@ -4,8 +4,8 @@ import {CommonModule} from '@angular/common';
 import {CarouselModule} from 'ngx-owl-carousel-o';
 import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to';
 
-import {ClientComponent} from '../pages/home-page/components/client/client.component';
-import {SwitcherComponent} from '../pages/home-page/components/switcher/switcher.component';
+import {ClientComponent} from './client/client.component';
+import {SwitcherComponent} from './switcher/switcher.component';
 import {ScrollspyDirective} from './scrollspy.directive';
 
 @NgModule({
