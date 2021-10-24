@@ -6,7 +6,6 @@ import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to';
 
 import {ClientComponent} from '../pages/home-page/components/client/client.component';
 import {FaqComponent} from '../pages/home-page/components/faq/faq.component';
-import {ContactComponent} from '../pages/home-page/components/contact/contact.component';
 import {SwitcherComponent} from '../pages/home-page/components/switcher/switcher.component';
 import {ScrollspyDirective} from './scrollspy.directive';
 
@@ -14,7 +13,6 @@ import {ScrollspyDirective} from './scrollspy.directive';
   declarations: [
     ClientComponent,
     FaqComponent,
-    ContactComponent,
     SwitcherComponent,
     ScrollspyDirective
   ],
@@ -26,7 +24,6 @@ import {ScrollspyDirective} from './scrollspy.directive';
   exports: [
     ClientComponent,
     FaqComponent,
-    ContactComponent,
     SwitcherComponent,
     ScrollspyDirective
   ]
