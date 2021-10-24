@@ -5,14 +5,12 @@ import {CarouselModule} from 'ngx-owl-carousel-o';
 import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to';
 
 import {ClientComponent} from '../pages/home-page/components/client/client.component';
-import {FaqComponent} from '../pages/home-page/components/faq/faq.component';
 import {SwitcherComponent} from '../pages/home-page/components/switcher/switcher.component';
 import {ScrollspyDirective} from './scrollspy.directive';
 
 @NgModule({
   declarations: [
     ClientComponent,
-    FaqComponent,
     SwitcherComponent,
     ScrollspyDirective
   ],
@@ -23,7 +21,6 @@ import {ScrollspyDirective} from './scrollspy.directive';
   ],
   exports: [
     ClientComponent,
-    FaqComponent,
     SwitcherComponent,
     ScrollspyDirective
   ]
