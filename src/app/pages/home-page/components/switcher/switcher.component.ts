@@ -8,8 +8,7 @@ import {Component} from '@angular/core';
 
 export class SwitcherComponent {
 
-
-  windowScroll() {
+  public windowScroll() :void {
     if (
       document.body.scrollTop > 100 ||
       document.documentElement.scrollTop > 100

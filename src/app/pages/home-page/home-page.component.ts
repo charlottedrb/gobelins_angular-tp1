@@ -1,4 +1,4 @@
-import {AfterViewInit, Component} from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'home-page',
@@ -6,37 +6,13 @@ import {AfterViewInit, Component} from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 
-export class HomePageComponent implements AfterViewInit {
+export class HomePageComponent  {
 
-  constructor() {
-  }
+  constructor() {  }
 
   currentSection = 'home-page';
 
-  ngAfterViewInit(): void {
-    // FIXME updateref + binding
-    let i = 1;
-    setInterval(() => {
-      if (i === 1) { // @ts-ignore
-        document.getElementById('text').innerHTML = 'We love make things amazing and simple';
-      } else if (i === 2) { // @ts-ignore
-        document.getElementById('text').innerHTML = 'Create amazing landing page with Globing';
-      } else { // @ts-ignore
-        document.getElementById('text').innerHTML = 'Perfect solution for small businesses';
-      }
-      if (i >= 3) {
-        i = 0;
-      }
-      i++;
-    }, 2500);
-
-
-  }
-
-  /**
-   * Window scroll method
-   */
-  windowScroll() {
+   public windowScroll() :void{
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
       // @ts-ignore
       document.getElementById('navbar').style.backgroundColor = '#1a1a1a';
@@ -50,19 +26,14 @@ export class HomePageComponent implements AfterViewInit {
     }
   }
 
-  /**
-   * Toggle navbar
-   */
-  toggleMenu() {
+
+  public toggleMenu(): void {
     // @ts-ignore
     document.getElementById('navbarCollapse').classList.toggle('show');
   }
 
-  /**
-   * Section changed method
-   * @param sectionId specify the current sectionID
-   */
-  onSectionChange(sectionId: string) {
+
+  public onSectionChange(sectionId: string): void {
     this.currentSection = sectionId;
   }
 

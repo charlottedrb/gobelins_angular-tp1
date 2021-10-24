@@ -7,15 +7,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./client.component.scss']
 })
 
-/**
- * Client component
- */
 export class ClientComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: false,
@@ -31,4 +24,10 @@ export class ClientComponent implements OnInit {
     nav: true,
     navText: [ '<div class="test_nav_right"><i class="ti-angle-right"></i></div>', '<div class="test_nav_left"><i class="ti-angle-left"></i></div>' ]
   }
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
 }
