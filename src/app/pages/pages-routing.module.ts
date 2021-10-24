@@ -7,21 +7,21 @@ import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
     {
-        path: '',
+        path: '', // Chemin par défaut http://localhost:4200 ou serveur renvoie sur /home-page
         redirectTo: 'home-page',
         pathMatch: 'full'
     },
      {
-        path: 'home-page',
+        path: 'home-page', // correspond à http://localhost:4200/home-page
         component: HomePageComponent
     },
     {
-        path: 'login',
+        path: 'login', // correspond à http://localhost:4200/login
         component: LoginComponent
     },
     {
         path: 'password_forget',
-        component: PasswordForgetComponent
+        component: PasswordForgetComponent // correspond à http://localhost:4200/password_forget
     },
     {
         path: 'signup',
