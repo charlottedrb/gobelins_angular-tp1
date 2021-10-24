@@ -1,35 +1,42 @@
 <!-- Back to top -->
 <div (window:scroll)="windowScroll()">
-<a href="javascript:void(0);" [ngxScrollTo]="'#home-page'" class="back-to-top" id="back-to-top"> <i class="ti-angle-up"> </i> </a>
+  <!-- note :  [ngxScrollTo] est une directive ( FIXME : Aborder le sujet) -->
+<a href="javascript:void(0);" [ngxScrollTo]="'#home-page'" class="back-to-top" id="back-to-top">
+  <i class="ti-angle-up"> </i>
+</a>
 </div>
+
 <!-- Style switcher -->
-<div id="style-switcher" [style]="isVisible ? 'left: 0px' : 'left: -189px'">
+<!-- FIXME add condition on style depending on if open or not-->
+<div id="style-switcher">
     <div>
         <h3>Select your color</h3>
+      <!-- FIXME *ngFor with call on click button -->
         <ul class="pattern">
             <li>
-                <a class="color1" href="javascript: void(0);" (click)="setTheme('default')"></a>
+                <a class="color1" href="javascript: void(0);" ></a>
             </li>
             <li>
-                <a class="color2" href="javascript: void(0);" (click)="setTheme('pink')"></a>
+                <a class="color2" href="javascript: void(0);" ></a>
             </li>
             <li>
-                <a class="color3" href="javascript: void(0);" (click)="setTheme('yellow')"></a>
+                <a class="color3" href="javascript: void(0);"></a>
             </li>
             <li>
-                <a class="color4" href="javascript: void(0);" (click)="setTheme('green')"></a>
+                <a class="color4" href="javascript: void(0);" ></a>
             </li>
             <li>
-                <a class="color5" href="javascript: void(0);" (click)="setTheme('purple')"></a>
+                <a class="color5" href="javascript: void(0);" ></a>
             </li>
             <li>
-                <a class="color6" href="javascript: void(0);" (click)="setTheme('light-blue')"></a>
+                <a class="color6" href="javascript: void(0);" ></a>
             </li>
         </ul>
     </div>
     <div class="bottom">
-        <a href="javascript: void(0);" class="settings" (click)="toggleSwitcher()"><i
-                class="ti-settings ti-spin"></i></a>
+        <a href="javascript: void(0);" class="settings">
+          <i class="ti-settings ti-spin"></i>
+        </a>
     </div>
 </div>
 <!-- end Style switcher -->
