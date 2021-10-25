@@ -1,7 +1,7 @@
 <!-- Back to top -->
 <div (window:scroll)="windowScroll()">
   <!-- note :  [ngxScrollTo] est une directive cf https://angular.io/guide/attribute-directives -->
-<a href="javascript:void(0);" [ngxScrollTo]="'#home-page'" class="back-to-top" id="back-to-top">
+<a [ngxScrollTo]="'#home-page'" class="back-to-top link" id="back-to-top">
   <i class="ti-angle-up"> </i>
 </a>
 </div>
@@ -14,27 +14,27 @@
       <!-- FIXME *ngFor with function 's call on click button -->
         <ul class="pattern">
             <li>
-                <a class="color1" href="javascript: void(0);" ></a>
+                <a class="color1"></a>
             </li>
             <li>
-                <a class="color2" href="javascript: void(0);" ></a>
+                <a class="color2"></a>
             </li>
             <li>
-                <a class="color3" href="javascript: void(0);"></a>
+                <a class="color3"></a>
             </li>
             <li>
-                <a class="color4" href="javascript: void(0);" ></a>
+                <a class="color4"></a>
             </li>
             <li>
-                <a class="color5" href="javascript: void(0);" ></a>
+                <a class="color5"></a>
             </li>
             <li>
-                <a class="color6" href="javascript: void(0);" ></a>
+                <a class="color6"></a>
             </li>
         </ul>
     </div>
     <div class="bottom">
-        <a href="javascript: void(0);" class="settings">
+        <a class="settings link">
           <i class="ti-settings ti-spin"></i>
         </a>
     </div>
