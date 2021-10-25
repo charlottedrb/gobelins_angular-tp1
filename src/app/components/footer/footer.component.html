@@ -15,14 +15,14 @@
                 </div>
                 <div class="footer-terms">
                     <ul class="mb-0 list-inline text-center mt-4 pt-2">
-                        <li class="list-inline-item"><a href="#" class="text-muted">Terms & Condition</a></li>
-                        <li class="list-inline-item"><a href="#" class="text-muted">Privacy Policy</a></li>
-                        <li class="list-inline-item"><a href="#" class="text-muted">Contact Us</a></li>
+                        <li *ngIf="showText1" class="list-inline-item"><a href="#" class="text-muted">{{ text1 }}</a></li>
+                        <li *ngIf="showText2" class="list-inline-item"><a href="#" class="text-muted">{{ text2 }}</a></li>
+                        <li *ngIf="showText3" class="list-inline-item"><a href="#" class="text-muted">{{ text3 }}</a></li>
                     </ul>
                 </div>
                 <div class="mt-4 pt-2 text-center">
                     <p class="copy-rights text-muted mb-0">
-                        2021 © Globing. Design by Themesbrand
+                        {{ year }} © Globing. Design by Themesbrand
                     </p>
                 </div>
             </div>
