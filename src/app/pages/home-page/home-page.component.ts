@@ -1,16 +1,17 @@
 import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'home-page', //selecteur html pour appeler le compo
+  selector: 'home-page', //sélecteur html pour appeler le compo
   templateUrl: './home-page.component.html',// template associé
   styleUrls: ['./home-page.component.scss']// style associé pour surcharger les styles principaux
 
 })
 
 // HomePageComponent convention de nommage PascalCase pour les noms de classe
+// OnInit, AfterViewInit et OnDestroy sont des hooks. On doit implémenter les méthodes correspondantes (ngOnInit...)
 export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
 
-  // variables et functions convention de nomage camelCase
+  // variables et functions convention de nommage camelCase
   currentSection = 'home-page';
 
   constructor() {
