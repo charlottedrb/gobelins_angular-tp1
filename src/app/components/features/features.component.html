@@ -9,37 +9,22 @@
                     be of a page when established fact looking at its layout.</p>
             </div>
         </div>
-        <div class="row mt-5 vertical-content">
-            <div class="col-lg-6 mt-2">
-                <div>
-                    <img src="../../../../../assets/images/mockup2.png" alt="" class="img-fluid mx-auto d-block">
+        <div *ngFor="let item of featureData">
+            <div class="row mt-5 vertical-content" [ngClass]="{ 'flex-row-reverse pt-5' : item.pictureRight === true }">
+                <div class="mt-2" [ngClass]="{ 'col-lg-5' : item.pictureRight === true, 'col-lg-6' : item.pictureRight === false}">
+                    <div>
+                        <img src="../../../../../assets/images/{{ item.imagePath }}" alt="" class="img-fluid mx-auto d-block">
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-5 offset-lg-1 mt-2">
-                <div class="features-desc">
-                    <h2>This is Improve Your Marketing <br> business</h2>
-                    <p class="text-muted mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis
-                        nostrud .</p>
-                    <a href="#" class="btn btn-primary btn-round mt-3">Read more<i
-                        class="mdi mdi-chevron-right"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-5 pt-5 vertical-content">
-            <div class="col-lg-5 mt-2">
-                <div class="features-desc">
-                    <h2>This Is Increase Your Marketing Performance</h2>
-                    <p class="text-muted mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis
-                        nostrud .</p>
-                    <a href="#" class="btn btn-primary btn-round mt-3">Read more<i
-                        class="mdi mdi-chevron-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-6 offset-lg-1 mt-2">
-                <div>
-                    <img src="../../../../../assets/images/mockup1.png" alt="" class="img-fluid mx-auto d-block">
+                <div class="mt-2" [ngClass]="{ 'col-lg-5' : item.pictureRight === false, 'col-lg-6' : item.pictureRight === true}">
+                    <div class="features-desc">
+                        <h2>This is Improve Your Marketing <br> {{ item.title }}</h2>
+                        <p class="text-muted mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis
+                            nostrud .</p>
+                        <a href="#" class="btn btn-primary btn-round mt-3">Read more<i
+                            class="mdi mdi-chevron-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

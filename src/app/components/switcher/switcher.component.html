@@ -8,28 +8,28 @@
 
 <!-- Style switcher -->
 <!-- FIXME add condition on style depending on if its open or not-->
-<div id="style-switcher">
+<div id="style-switcher" (click)="toggleSettings()">
     <div>
         <h3>Select your color</h3>
       <!-- FIXME *ngFor with function 's call on click button -->
         <ul class="pattern">
             <li>
-                <a class="color1"></a>
+                <a class="color1" (click)="setTheme('blue')"></a>
             </li>
             <li>
-                <a class="color2"></a>
+                <a class="color2" (click)="setTheme('pink')"></a>
             </li>
             <li>
-                <a class="color3"></a>
+                <a class="color3" (click)="setTheme('yellow')"></a>
             </li>
             <li>
-                <a class="color4"></a>
+                <a class="color4" (click)="setTheme('green')"></a>
             </li>
             <li>
-                <a class="color5"></a>
+                <a class="color5" (click)="setTheme('purple')"></a>
             </li>
             <li>
-                <a class="color6"></a>
+                <a class="color6" (click)="setTheme('default')"></a>
             </li>
         </ul>
     </div>
