@@ -15,6 +15,7 @@ import { PricingComponent } from './pricing/pricing.component';
 import { ServicesComponent } from './services/services.component';
 import { CtaComponent } from './cta/cta.component';
 import { TeamComponent } from './team/team.component';
+import {TeamModule} from "./team/components/team.module";
 
 @NgModule({
     declarations: [
@@ -33,7 +34,8 @@ import { TeamComponent } from './team/team.component';
     imports: [
         CommonModule,
         CarouselModule,
-        ScrollToModule.forRoot()
+        ScrollToModule.forRoot(),
+        TeamModule
     ],
     exports: [
         ClientComponent,
