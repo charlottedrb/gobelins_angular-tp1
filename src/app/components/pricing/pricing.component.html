@@ -14,7 +14,7 @@
             <!-- FIXME use *ngFor + array of datas in component + ngClass-->
             <!-- FIXME (option) ngClass explore true/false resolution-->
             <div class="col-lg-4" *ngFor="let item of pricingData">
-                <div class="bg-white price-box text-center mt-3">
+                <div class="bg-white price-box text-center mt-3" [ngClass]="{'active': item.isActive === true}">
                     <div class="plan-price fw-bold">
                         <h1 class="mb-0 fw-bold">{{ item.price }}</h1>
                         <p class="mb-0">Per Month</p>
@@ -23,7 +23,7 @@
                         <p>Bandwidth: <b class="text-primary">{{ item.bandWidth }}</b></p>
                         <p>Onlinespace: {{ item.space }}</p>
                         <p>Support: {{ item.support }}</p>
-                        <p>{{ item.domain }} Domain</p>
+                        <p>{{ item.domain }} Domain{{ item.domain > 1 ? 's' : '' }}</p>
                         <p class="mb-0">No Hidden Fees</p>
                     </div>
                     <div>
