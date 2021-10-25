@@ -7,6 +7,8 @@ import {Component} from '@angular/core';
 })
 
 export class SwitcherComponent {
+    // autre méthode pour le toggle
+    // isVisible: boolean
 
     public windowScroll(): void {
         if (
@@ -24,6 +26,9 @@ export class SwitcherComponent {
     public toggleSettings(): void {
         // @ts-ignore
         document.querySelector('#style-switcher').classList.toggle('active')
+
+        // autre méthode
+        // this.isVisible = !this.isVisible
     }
 
     public setTheme(theme: string): void {
