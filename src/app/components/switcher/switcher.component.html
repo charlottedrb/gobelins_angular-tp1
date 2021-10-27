@@ -16,23 +16,8 @@
         <h3>Select your color</h3>
       <!-- FIXME *ngFor with function 's call on click button -->
         <ul class="pattern">
-            <li>
-                <a class="color1" (click)="setTheme('default')"></a>
-            </li>
-            <li>
-                <a class="color2" (click)="setTheme('pink')"></a>
-            </li>
-            <li>
-                <a class="color3" (click)="setTheme('yellow')"></a>
-            </li>
-            <li>
-                <a class="color4" (click)="setTheme('green')"></a>
-            </li>
-            <li>
-                <a class="color5" (click)="setTheme('purple')"></a>
-            </li>
-            <li>
-                <a class="color6" (click)="setTheme('light-blue')"></a>
+            <li *ngFor="let theme of themes; let i = index">
+                <a [ngClass]="'color' + (i+1)" (click)="setTheme(theme)"></a>
             </li>
         </ul>
     </div>

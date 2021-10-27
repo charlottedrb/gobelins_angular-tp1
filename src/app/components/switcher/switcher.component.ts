@@ -9,6 +9,14 @@ import {Component} from '@angular/core';
 export class SwitcherComponent {
     // autre méthode pour le toggle
     // isVisible: boolean
+    themes = [
+        'default',
+        'pink',
+        'yellow',
+        'green',
+        'purple',
+        'light-blue'
+    ]
 
     public windowScroll(): void {
         if (
