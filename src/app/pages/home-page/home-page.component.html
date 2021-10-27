@@ -78,9 +78,9 @@
     </section>
     <!-- END HOME -->
 
-    <services></services>
+    <services (changeTitleEvent)="onEmitChangeTitle($event)"></services>
 
-    <features></features>
+    <features [title]="changeFeaturesTitle"></features>
 
     <!-- note : client est un selector, il permet de charger le component ainsi que son html & css -->
     <client></client>

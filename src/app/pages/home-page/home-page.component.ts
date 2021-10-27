@@ -22,6 +22,7 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
         'Create amazing landing pages with Globing'
     ]
     toggleSocialLinks: boolean
+    changeFeaturesTitle: string
 
     constructor(@Inject(DOCUMENT) private readonly document: Document, private readonly changeDetector: ChangeDetectorRef) {
         // exécuté en premier !
@@ -56,7 +57,12 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
         console.log(event)
         this.toggleSocialLinks = event
         this.changeDetector.detectChanges()
-        console.log('HomePageComponent onEmitToggleSocialLinksEvent')
+        // console.log('HomePageComponent onEmitToggleSocialLinksEvent')
+    }
+
+    public onEmitChangeTitle(event: string) {
+        this.changeFeaturesTitle = event
+        this.changeDetector.detectChanges()
     }
 
     // Toujours utiliser public ou private pour les fonctions, variables , constantes ...

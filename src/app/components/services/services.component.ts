@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
     selector: 'services',
@@ -8,6 +8,7 @@ import {Component, OnInit} from '@angular/core';
 export class ServicesComponent implements OnInit {
 
     serviceData: ServiceData[]
+    @Output() changeTitleEvent = new EventEmitter()
 
     constructor() {
         this.serviceData = [
@@ -18,6 +19,11 @@ export class ServicesComponent implements OnInit {
             new ServiceData("Truly Multipurpose", 'ti-dashboard'),
             new ServiceData("Easy to customize", 'ti-headphone')
         ]
+    }
+
+    public emitChangeTitle(event: string) {
+        this.changeTitleEvent.emit(event)
+        console.log('ServicesComponent emitChangeTitle')
     }
 
     ngOnInit(): void {
