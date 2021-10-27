@@ -11,14 +11,14 @@
         </div>
         <div class="row mt-5">
             <!-- FIXME use *ngFor -->
-            <div class="col-lg-4" *ngFor="let item of teamData">
+            <div class="col-lg-4" *ngFor="let item of teamMemberList">
                 <div class="text-center bg-white team-box mt-3 p-5" [ngClass]="{ 'active' : item.isActive === true }">
                     <div class="">
-                        <img src="../../../../../assets/images/team/{{ item.imagePath }}" alt=""
+                        <img src="../../../../../assets/images/team/{{ item.img }}" alt=""
                              class="img-fluid rounded-circle mx-auto d-block">
                     </div>
                     <div class="team-name">
-                        <p class="fw-bold mb-0 mt-4">@{{ item.name() }}</p>
+                        <p class="fw-bold mb-0 mt-4">{{ item.name }}</p>
                         <p class="text-muted mt-4">You want customer to your store. Easily your coupans and has
                             Clooger.</p>
                     </div>
