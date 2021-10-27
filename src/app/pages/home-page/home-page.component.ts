@@ -13,7 +13,13 @@ import {DOCUMENT} from "@angular/common";
 export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
 
     // variables et functions convention de nommage camelCase
-    currentSection = 'home-page';
+    currentSection = 'home-page'
+    titleInterval: number = 0
+    titles: string[] = [
+        'We love make things amazing and simple',
+        'Perfect solution for small business',
+        'Create amazing landing pages with Globing'
+    ]
 
     constructor(@Inject(DOCUMENT) private readonly document: Document) {
         // exécuté en premier !
@@ -33,6 +39,15 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
         // exécuté automatiquement après l'initialisation de la vue
         // obligatoire si implements AfterViewInit (qui est facultatif)
         // D'autres existent, voir https://angular.io/guide/lifecycle-hooks
+        const html = document.getElementById('text')
+        if(!html) return
+
+        let i = 1
+        this.titleInterval = setInterval(() => {
+            if(i > 2) i = 0
+            html.innerHTML = this.titles[i]
+            i++
+        }, 2500)
     }
 
     // Toujours utiliser public ou private pour les fonctions, variables , constantes ...
@@ -79,6 +94,7 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
         // obligatoire si implements OnDestroy (qui est facultatif)
         // Important : Si on a souscrit à des abonnements, se désabonner ici pour éviter les fuites de mémoires
         // D'autres existent, voir https://angular.io/guide/lifecycle-hooks
+        clearInterval(this.titleInterval)
     }
 
 }
