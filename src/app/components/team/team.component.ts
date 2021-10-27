@@ -10,7 +10,7 @@ import {TeamMemberLinks} from "../../models/team-member-links";
 export class TeamComponent implements OnInit {
 
     // teamData: TeamData[]
-    teamMemberList: TeamMember[]
+    teamMemberList: TeamMember[] = []
 
     constructor() {
         this.teamMemberList = [
