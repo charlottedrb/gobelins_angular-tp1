@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, Input, OnChanges, OnInit} from '@angular/core';
 import {TeamMember} from "../../models/team-member";
 import {TeamMemberLinks} from "../../models/team-member-links";
 
@@ -7,12 +7,13 @@ import {TeamMemberLinks} from "../../models/team-member-links";
     templateUrl: './team.component.html',
     styleUrls: ['./team.component.css']
 })
-export class TeamComponent implements OnInit {
+export class TeamComponent implements OnInit, OnChanges {
 
     // teamData: TeamData[]
     teamMemberList: TeamMember[] = []
+    @Input() toggleSocialLinks: boolean
 
-    constructor() {
+    constructor(private readonly changeDetectorRef: ChangeDetectorRef) {
         this.teamMemberList = [
             new TeamMember({
                 img: "../../../../../assets/images/team/team-3.png",
@@ -20,7 +21,7 @@ export class TeamComponent implements OnInit {
                 text: "You want customer to your store. Easily your coupans and has Clooger.",
                 isActive: true,
                 links: new TeamMemberLinks({
-                    github: '',
+                    github: 'https://github.com/charlottedrb/',
                     skype: '',
                     twitter: ''
                 })
@@ -30,7 +31,7 @@ export class TeamComponent implements OnInit {
                 name: "@Rigoberto Valenza",
                 text: "You want customer to your store. Easily your coupans and has Clooger.",
                 links: new TeamMemberLinks({
-                    github: '',
+                    github: 'https://github.com/charlottedrb/',
                     skype: '',
                     twitter: ''
                 })
@@ -41,7 +42,7 @@ export class TeamComponent implements OnInit {
                 text: "You want customer to your store. Easily your coupans and has Clooger.",
                 isActive: true,
                 links: new TeamMemberLinks({
-                    github: '',
+                    github: 'https://github.com/charlottedrb/',
                     skype: '',
                     twitter: ''
                 })
@@ -50,6 +51,13 @@ export class TeamComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        this.changeDetectorRef.detectChanges()
+        console.log('TeamComponent onInit')
+    }
+
+    ngOnChanges() {
+        this.changeDetectorRef.detectChanges()
+        console.log('TeamComponent onChanges')
     }
 
 }

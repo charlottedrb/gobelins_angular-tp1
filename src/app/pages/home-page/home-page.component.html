@@ -85,11 +85,11 @@
     <!-- note : client est un selector, il permet de charger le component ainsi que son html & css -->
     <client></client>
 
-    <team></team>
+    <team [toggleSocialLinks]="toggleSocialLinks"></team>
 
     <faq></faq>
 
-    <cta></cta>
+    <cta (toggleSocialLinksEvent)="onEmitToggleSocialLinksEvent($event)"></cta>
 
     <pricing></pricing>
 

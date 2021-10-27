@@ -1,5 +1,6 @@
-import {AfterViewInit, Component, Inject, OnDestroy, OnInit} from '@angular/core';
+import {AfterViewInit, ChangeDetectorRef, Component, EventEmitter, Inject, OnDestroy, OnInit} from '@angular/core';
 import {DOCUMENT} from "@angular/common";
+import {Event} from "@angular/router";
 
 @Component({
     selector: 'home-page', //sélecteur html pour appeler le compo
@@ -20,8 +21,9 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
         'Perfect solution for small business',
         'Create amazing landing pages with Globing'
     ]
+    toggleSocialLinks: boolean
 
-    constructor(@Inject(DOCUMENT) private readonly document: Document) {
+    constructor(@Inject(DOCUMENT) private readonly document: Document, private readonly changeDetector: ChangeDetectorRef) {
         // exécuté en premier !
 
         // exemple de log à checker dans la console du navigateur
@@ -48,6 +50,13 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
             html.innerHTML = this.titles[i]
             i++
         }, 2500)
+    }
+
+    public onEmitToggleSocialLinksEvent(event: boolean) {
+        console.log(event)
+        this.toggleSocialLinks = event
+        this.changeDetector.detectChanges()
+        console.log('HomePageComponent onEmitToggleSocialLinksEvent')
     }
 
     // Toujours utiliser public ou private pour les fonctions, variables , constantes ...
