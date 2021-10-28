@@ -17,6 +17,7 @@ import { CtaComponent } from './cta/cta.component';
 import { TeamComponent } from './team/team.component';
 import {TeamModule} from "./team/components/team.module";
 import {TruncateTextPipe} from "../pipes/truncate-text.pipe";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -37,7 +38,8 @@ import {TruncateTextPipe} from "../pipes/truncate-text.pipe";
         CommonModule,
         CarouselModule,
         ScrollToModule.forRoot(),
-        TeamModule
+        TeamModule,
+        ReactiveFormsModule
     ],
     exports: [
         ClientComponent,

@@ -23,36 +23,47 @@
                 </div>
             </div>
             <div class="col-lg-8">
-                <div class="custom-form mt-4 pt-4">
-                    <form method="post" name="myForm" onsubmit="return validateForm()">
+                <div *ngIf="sent">
+                    <div class="alert alert-primary">
+                        Your message has been sent successfully !
+                    </div>
+                    <button class="btn btn-primary" (click)="resetForm()">Send a new message</button>
+                </div>
+
+                <div class="custom-form mt-4 pt-4" *ngIf="sent == false">
+                    <form method="post" [formGroup]="contactForm" (ngSubmit)="submitForm()">
                         <p id="error-msg"></p>
-                        <div id="simple-msg"></div>
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="form-group mt-2">
-                                    <input name="name" id="name" type="text" class="form-control"
+                                <div class="form-group mb-3 mt-2">
+                                    <input formControlName="name" id="name" type="text" class="form-control mb-0"
                                            placeholder="Your name*">
+                                    <small class="text-danger" *ngIf="submitted && contactForm.controls.name.invalid">Your name is required.</small>
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="form-group mt-2">
-                                    <input name="email" id="email" type="email" class="form-control"
+                                <div class="form-group mb-3 mt-2">
+                                    <input formControlName="email" id="email" type="email" class="form-control mb-0"
                                            placeholder="Your email*">
+                                    <small class="text-danger form-text" *ngIf="submitted && contactForm.controls.email.errors?.required">Your email is required.</small>
+                                    <small class="text-danger" *ngIf="submitted && contactForm.controls.email.errors?.email">Your email is not valid.</small>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="form-group mt-2">
-                                    <input type="text" class="form-control" id="subject" placeholder="Your Subject.."/>
+                                <div class="form-group mb-3 mt-2">
+                                    <input formControlName="subject" type="text" class="form-control mb-0" id="subject" placeholder="Your Subject..*"/>
+                                    <small class="text-danger" *ngIf="submitted && contactForm.controls.subject.invalid">Subject is required.</small>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="form-group mt-2">
-                                    <textarea name="comments" id="comments" rows="4" class="form-control"
-                                              placeholder="Your message..."></textarea>
+                                <div class="form-group mb-3 mt-2">
+                                    <textarea formControlName="comments" id="comments" rows="4" class="form-control mb-0"
+                                              placeholder="Your message...*"></textarea>
+                                    <small class="text-danger"  *ngIf="submitted && contactForm.controls.comments.invalid">Message is required.</small>
                                 </div>
                             </div>
                         </div>
@@ -60,7 +71,6 @@
                             <div class="col-lg-12 text-right">
                                 <input type="submit" id="submit" name="send" class="submitBnt btn btn-primary"
                                        value="Send Message">
-                                <div id="simple-msg"></div>
                             </div>
                         </div>
                     </form>

@@ -1,6 +1,7 @@
-import {ChangeDetectorRef, Component, Input, OnChanges, OnInit} from '@angular/core';
-import {TeamMember} from "../../models/team-member";
-import {TeamMemberLinks} from "../../models/team-member-links";
+import {ChangeDetectorRef, Component, Input, OnChanges, OnInit} from '@angular/core'
+import {TeamMember} from "../../models/team-member"
+import {TeamMemberLinks} from "../../models/team-member-links"
+import * as faker from "faker"
 
 @Component({
     selector: 'team',
@@ -14,6 +15,8 @@ export class TeamComponent implements OnInit, OnChanges {
     @Input() toggleSocialLinks: boolean
 
     constructor(private readonly changeDetectorRef: ChangeDetectorRef) {
+        console.log(faker.image.imageUrl(undefined, undefined, undefined, true, false))
+
         this.teamMemberList = [
             new TeamMember({
                 img: "../../../../../assets/images/team/team-3.png",
