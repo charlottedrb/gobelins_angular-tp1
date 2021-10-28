@@ -16,6 +16,7 @@ import { ServicesComponent } from './services/services.component';
 import { CtaComponent } from './cta/cta.component';
 import { TeamComponent } from './team/team.component';
 import {TeamModule} from "./team/components/team.module";
+import {TruncateTextPipe} from "../pipes/truncate-text.pipe";
 
 @NgModule({
     declarations: [
@@ -29,7 +30,8 @@ import {TeamModule} from "./team/components/team.module";
         PricingComponent,
         ServicesComponent,
         CtaComponent,
-        TeamComponent
+        TeamComponent,
+        TruncateTextPipe
     ],
     imports: [
         CommonModule,
@@ -48,7 +50,8 @@ import {TeamModule} from "./team/components/team.module";
         PricingComponent,
         ServicesComponent,
         CtaComponent,
-        TeamComponent
+        TeamComponent,
+        TruncateTextPipe
     ]
 })
 export class SharedModule {
